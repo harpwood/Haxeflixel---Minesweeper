@@ -2,7 +2,7 @@ package;
 
 import flixel.FlxG;
 import flixel.FlxState;
-import flixel.input.mouse.FlxMouseEventManager;
+import flixel.input.mouse.FlxMouseEvent;
 import flixel.text.FlxText;
 import haxe.Timer;
 import haxe.ds.Vector;
@@ -112,7 +112,7 @@ class PlayState extends FlxState
 				add(tile);
 				tiles[i][j] = tile;
 
-				FlxMouseEventManager.add(tile, onMouseDownTile, onMouseUpTile, onMouseOverTile, onMouseOutTile);
+				FlxMouseEvent.add(tile, onMouseDownTile, onMouseUpTile, onMouseOverTile, onMouseOutTile);
 			}
 		}
 		// end of tiles creation and position
